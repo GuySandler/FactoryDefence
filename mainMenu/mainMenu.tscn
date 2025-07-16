@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://lxt24o6o244s"]
+
+[ext_resource type="Script" uid="uid://bq10ikq3yytq" path="res://mainMenu/start_game.gd" id="1_kpht7"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="StartGame" type="Button" parent="."]
+offset_left = -70.0
+offset_right = 76.0
+offset_bottom = 47.0
+text = "Play
+"
+script = ExtResource("1_kpht7")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Title" type="Label" parent="."]
+offset_left = -250.0
+offset_top = -280.0
+offset_right = 250.0
+offset_bottom = -197.0
+theme_override_font_sizes/font_size = 60
+text = "Factory Defense"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="StartGame" to="StartGame" method="_on_pressed"]
