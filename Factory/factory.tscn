@@ -1,9 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://y5pjkmqmpch"]
+[gd_scene load_steps=5 format=3 uid="uid://y5pjkmqmpch"]
 
 [ext_resource type="Script" uid="uid://bhmbbs2spjwwd" path="res://Factory/factory.gd" id="1_f3q3i"]
+[ext_resource type="Texture2D" uid="uid://d1453ikkn8kt5" path="res://Defense/grass.png" id="2_l7gtj"]
+[ext_resource type="Theme" uid="uid://dxrkqvsmm3hfh" path="res://MainButtonTheme.tres" id="3_qxjmn"]
+[ext_resource type="Texture2D" uid="uid://isnvf15agq0p" path="res://Factory/icons/drill.png" id="4_61oao"]
 
 [node name="Factory" type="Node2D"]
 script = ExtResource("1_f3q3i")
+
+[node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="Button" type="Button" parent="."]
 offset_left = -560.0
@@ -13,7 +18,37 @@ offset_bottom = 310.0
 theme_override_font_sizes/font_size = 30
 text = "To Defence"
 
-[node name="Camera2D" type="Camera2D" parent="Button"]
-position = Vector2(560, -260)
+[node name="grass" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(-2.76566e-05, 0)
+scale = Vector2(36, 20.5)
+texture = ExtResource("2_l7gtj")
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = -555.0
+offset_top = -312.0
+offset_right = -481.0
+offset_bottom = -289.0
+text = "Machines"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -544.0
+offset_top = -288.0
+offset_right = -496.0
+offset_bottom = -240.0
+
+[node name="TextureButton" type="TextureButton" parent="ColorRect"]
+z_index = 10
+texture_filter = 1
+layout_mode = 0
+offset_right = 48.0
+offset_bottom = 48.0
+tooltip_text = "Drill"
+mouse_default_cursor_shape = 2
+theme = ExtResource("3_qxjmn")
+texture_normal = ExtResource("4_61oao")
+stretch_mode = 0
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="ColorRect/TextureButton" to="." method="drill_pressed"]

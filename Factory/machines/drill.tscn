@@ -1,0 +1,96 @@
+[gd_scene load_steps=14 format=3 uid="uid://dkqbeclr3b2u5"]
+
+[ext_resource type="Texture2D" uid="uid://db0dgdi78qudi" path="res://Factory/machines/sprites/drill.png" id="1_5yp6i"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lpqse"]
+atlas = ExtResource("1_5yp6i")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lcmcm"]
+atlas = ExtResource("1_5yp6i")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dycu4"]
+atlas = ExtResource("1_5yp6i")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wfb3c"]
+atlas = ExtResource("1_5yp6i")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_03x87"]
+atlas = ExtResource("1_5yp6i")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o4ykd"]
+atlas = ExtResource("1_5yp6i")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_owuyg"]
+atlas = ExtResource("1_5yp6i")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u41mp"]
+atlas = ExtResource("1_5yp6i")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rhyap"]
+atlas = ExtResource("1_5yp6i")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0lf6q"]
+atlas = ExtResource("1_5yp6i")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7tv2p"]
+atlas = ExtResource("1_5yp6i")
+region = Rect2(32, 96, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hglhb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lpqse")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lcmcm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dycu4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wfb3c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_03x87")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o4ykd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_owuyg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u41mp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rhyap")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0lf6q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7tv2p")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Drill" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_hglhb")
+frame_progress = 0.720298
+speed_scale = 2.0
